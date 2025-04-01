@@ -50,7 +50,14 @@ const FeedbackEmojiImproved = ({
               )} 
             />
           </button>
-          <span className="text-sm font-medium text-gray-600">Unhappy</span>
+          <span className={cn(
+            "text-sm transition-colors",
+            selectedRating === "unhappy" 
+              ? "font-bold text-black" 
+              : "font-medium text-gray-400"
+          )}>
+            Unhappy
+          </span>
         </div>
 
         {/* Neutral */}
@@ -73,7 +80,14 @@ const FeedbackEmojiImproved = ({
               )} 
             />
           </button>
-          <span className="text-sm font-medium text-gray-600">Neutral</span>
+          <span className={cn(
+            "text-sm transition-colors",
+            selectedRating === "neutral" 
+              ? "font-bold text-black" 
+              : "font-medium text-gray-400"
+          )}>
+            Neutral
+          </span>
         </div>
 
         {/* Happy */}
@@ -96,7 +110,14 @@ const FeedbackEmojiImproved = ({
               )} 
             />
           </button>
-          <span className="text-sm font-medium text-gray-600">Happy</span>
+          <span className={cn(
+            "text-sm transition-colors",
+            selectedRating === "happy" 
+              ? "font-bold text-black" 
+              : "font-medium text-gray-400"
+          )}>
+            Happy
+          </span>
         </div>
       </div>
       
