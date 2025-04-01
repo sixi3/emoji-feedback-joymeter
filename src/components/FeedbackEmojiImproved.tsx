@@ -48,6 +48,7 @@ const FeedbackEmojiImproved = ({
               selectedRating === "unhappy" ? "text-red-500" : "text-gray-500"
             )} 
             fill={selectedRating === "unhappy" ? "#ef4444" : "none"}
+            stroke={selectedRating === "unhappy" ? "white" : "currentColor"}
           />
         </button>
 
@@ -69,6 +70,7 @@ const FeedbackEmojiImproved = ({
               selectedRating === "neutral" ? "text-yellow-500" : "text-gray-500"
             )} 
             fill={selectedRating === "neutral" ? "#eab308" : "none"}
+            stroke={selectedRating === "neutral" ? "white" : "currentColor"}
           />
         </button>
 
@@ -90,6 +92,7 @@ const FeedbackEmojiImproved = ({
               selectedRating === "happy" ? "text-green-500" : "text-gray-500"
             )} 
             fill={selectedRating === "happy" ? "#22c55e" : "none"}
+            stroke={selectedRating === "happy" ? "white" : "currentColor"}
           />
         </button>
       </div>
