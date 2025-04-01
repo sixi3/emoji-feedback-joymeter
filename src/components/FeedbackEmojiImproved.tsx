@@ -29,66 +29,75 @@ const FeedbackEmojiImproved = ({
         {title}
       </h3>
       
-      <div className="flex justify-center items-center gap-6 md:gap-8">
+      <div className="flex justify-center items-start gap-6 md:gap-8">
         {/* Unhappy */}
-        <button
-          onClick={() => handleSelect("unhappy")}
-          className={cn(
-            "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200",
-            selectedRating === "unhappy" 
-              ? "bg-red-100 border-2 border-red-400 scale-110" 
-              : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
-          )}
-          aria-label="Unhappy rating"
-        >
-          <FrownIcon 
-            size={32} 
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => handleSelect("unhappy")}
             className={cn(
-              "transition-colors",
-              selectedRating === "unhappy" ? "text-red-500" : "text-gray-500"
-            )} 
-          />
-        </button>
+              "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200 mb-2",
+              selectedRating === "unhappy" 
+                ? "bg-red-100 border-2 border-red-400 scale-110" 
+                : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
+            )}
+            aria-label="Unhappy rating"
+          >
+            <FrownIcon 
+              size={32} 
+              className={cn(
+                "transition-colors",
+                selectedRating === "unhappy" ? "text-red-500" : "text-gray-500"
+              )} 
+            />
+          </button>
+          <span className="text-sm font-medium text-gray-600">Unhappy</span>
+        </div>
 
         {/* Neutral */}
-        <button
-          onClick={() => handleSelect("neutral")}
-          className={cn(
-            "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200",
-            selectedRating === "neutral" 
-              ? "bg-yellow-100 border-2 border-yellow-400 scale-110" 
-              : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
-          )}
-          aria-label="Neutral rating"
-        >
-          <MehIcon 
-            size={32} 
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => handleSelect("neutral")}
             className={cn(
-              "transition-colors",
-              selectedRating === "neutral" ? "text-yellow-500" : "text-gray-500"
-            )} 
-          />
-        </button>
+              "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200 mb-2",
+              selectedRating === "neutral" 
+                ? "bg-yellow-100 border-2 border-yellow-400 scale-110" 
+                : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
+            )}
+            aria-label="Neutral rating"
+          >
+            <MehIcon 
+              size={32} 
+              className={cn(
+                "transition-colors",
+                selectedRating === "neutral" ? "text-yellow-500" : "text-gray-500"
+              )} 
+            />
+          </button>
+          <span className="text-sm font-medium text-gray-600">Neutral</span>
+        </div>
 
         {/* Happy */}
-        <button
-          onClick={() => handleSelect("happy")}
-          className={cn(
-            "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200",
-            selectedRating === "happy" 
-              ? "bg-green-100 border-2 border-green-400 scale-110" 
-              : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
-          )}
-          aria-label="Happy rating"
-        >
-          <SmileIcon 
-            size={32} 
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => handleSelect("happy")}
             className={cn(
-              "transition-colors",
-              selectedRating === "happy" ? "text-green-500" : "text-gray-500"
-            )} 
-          />
-        </button>
+              "w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-200 mb-2",
+              selectedRating === "happy" 
+                ? "bg-green-100 border-2 border-green-400 scale-110" 
+                : "bg-gray-100 border border-gray-300 hover:bg-gray-200"
+            )}
+            aria-label="Happy rating"
+          >
+            <SmileIcon 
+              size={32} 
+              className={cn(
+                "transition-colors",
+                selectedRating === "happy" ? "text-green-500" : "text-gray-500"
+              )} 
+            />
+          </button>
+          <span className="text-sm font-medium text-gray-600">Happy</span>
+        </div>
       </div>
       
       {selectedRating && (
